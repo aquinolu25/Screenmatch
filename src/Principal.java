@@ -1,10 +1,12 @@
+import br.com.aquino.screenmatch.modelos.Filme;
+
 public class Principal {
     public static void main(String[] args) {
 
         Filme meuFilme = new Filme();
-        meuFilme.nome = "Sinners";
-        meuFilme.anoDeLancamento = 2025;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("Sinners");
+        meuFilme.setAnoDeLancamento(2025);
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
