@@ -38,4 +38,9 @@ public class Serie extends Titulo{
     public void setAtiva(boolean ativa) {
         this.ativa = ativa;
     }
+
+    @Override
+    public int getDuracaoEmMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
 }
