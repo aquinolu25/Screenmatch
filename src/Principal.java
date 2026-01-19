@@ -4,6 +4,8 @@ import br.com.aquino.screenmatch.modelos.Episodio;
 import br.com.aquino.screenmatch.modelos.Filme;
 import br.com.aquino.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -48,5 +50,20 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeDoLuiz = new Filme();
+        filmeDoLuiz.setNome("Hamlet");
+        filmeDoLuiz.setDuracaoEmMinutos(200);
+        filmeDoLuiz.setAnoDeLancamento(2025);
+        filmeDoLuiz.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoLuiz);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
     }
 }
