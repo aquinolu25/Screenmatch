@@ -1,3 +1,5 @@
+package br.com.aquino.screenmatch.principal;
+
 import br.com.aquino.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.aquino.screenmatch.calculos.FiltroRecomendacao;
 import br.com.aquino.screenmatch.modelos.Episodio;
