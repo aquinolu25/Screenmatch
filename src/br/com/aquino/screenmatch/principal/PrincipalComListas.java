@@ -5,6 +5,7 @@ import br.com.aquino.screenmatch.modelos.Serie;
 import br.com.aquino.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
 
@@ -30,6 +31,19 @@ public class PrincipalComListas {
                 System.out.println("Classificação " + filme.getClassificacao());
             }
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Paul Mescal");
+        buscaPorArtista.add("Olivia Dean");
+        buscaPorArtista.add("Connor Storie");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de titulos ordenados: ");
+        Collections.sort(lista);
+        System.out.println(lista);
 
     }
 }
