@@ -4,9 +4,7 @@ import br.com.aquino.screenmatch.modelos.Filme;
 import br.com.aquino.screenmatch.modelos.Serie;
 import br.com.aquino.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalComListas {
 
@@ -20,7 +18,7 @@ public class PrincipalComListas {
         filmeDoLuiz.avalia(10);
         Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeDoLuiz);
         lista.add(meuFilme);
         lista.add(outroFilme);
