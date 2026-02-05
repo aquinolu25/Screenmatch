@@ -1,5 +1,6 @@
 package br.com.aquino.screenmatch.principal;
 
+import br.com.aquino.screenmatch.excecao.ErroDeConversaoException;
 import br.com.aquino.screenmatch.modelos.Titulo;
 import br.com.aquino.screenmatch.modelos.TituloOmdb;
 import com.google.gson.FieldNamingPolicy;
@@ -20,7 +21,7 @@ public class PrincipalComBusca {
         System.out.println("Digite um filme para busca: ");
         var busca = sc.nextLine();
 
-        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=afcabd95";
+        String endereco = "https://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=afcabd95";
 
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -46,6 +47,8 @@ public class PrincipalComBusca {
             System.out.println(e.getMessage());
         } catch (IllegalArgumentException e) {
             System.out.println("Algum erro de argumento na busca, verifique o endereço");
+        } catch (ErroDeConversaoException e) {
+            System.out.println(e.getMessage());
         }
 
         System.out.println("O programa finalizou corretamente! ");
